@@ -1,0 +1,132 @@
+info:
+  name: GerorderSearchBydate Copy
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: http://apptest.sabina.co.th:8071/api/PosSales/getOrder_Search
+  body:
+    type: json
+    data: "{\r
+
+      \  //\"docno\": \"\",\r
+
+      \  \"customerId\": \"G010\",\r
+
+      \  \"isDateSearch\": \"Y\",\r
+
+      \  \"StartDate\": \"2025-02-01\",\r
+
+      \  \"EndDate\": \"2025-02-26\",\r
+
+      \  \"status\": \"A\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTc0MDYyNTM1NiwiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.TZ-iDZNkanXv50YytY91-6t8hraoPBoH_pziKxTTNDk
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GerorderSearchBydate
+    request:
+      url: http://apptest.sabina.co.th:8071/api/PosSales/getOrder_Search
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"docno\": \"\",\r
+
+          \  \"customerId\": \"A005\",\r
+
+          \  \"isDateSearch\": true,\r
+
+          \  \"StartDate\": \"2025-02-09\",\r
+
+          \  \"EndDate\": \"2025-02-09\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Encoding
+          value: gzip
+        - name: Vary
+          value: Accept-Encoding
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Thu, 20 Feb 2025 16:17:17 GMT
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "docno": "PSA00525020006",
+                  "customerid": "A005",
+                  "salesdate": "2025-02-09T00:00:00",
+                  "docdate": "2025-02-09T00:00:00",
+                  "createdate": "2025-02-09T12:02:21.117",
+                  "createuser": "PC001",
+                  "updatedate": "2025-02-09T12:02:21.117",
+                  "updateuser": "PC001",
+                  "remark": "",
+                  "status": "A",
+                  "mB_ID": "",
+                  "salestype": "",
+                  "posid": null,
+                  "pono": "",
+                  "sono": "",
+                  "grouprv": "",
+                  "usE_ONTOP": true,
+                  "ontoP_ID": "",
+                  "requetE_INVOICE": true,
+                  "isreturn": true,
+                  "totalqty": -2,
+                  "totallist": -1790,
+                  "totaldiscount": 0,
+                  "nettotal": -1790,
+                  "possalesdt": null
+              },
+              {
+                  "docno": "PSA00525020005",
+                  "customerid": "A005",
+                  "salesdate": "2025-02-09T00:00:00",
+                  "docdate": "2025-02-09T00:00:00",
+                  "createdate": "2025-02-09T00:00:00",
+                  "createuser": "CHAT",
+                  "updatedate": "2025-02-09T00:00:00",
+                  "updateuser": "CHAT",
+                  "remark": "",
+                  "status": "A",
+                  "mB_ID": "",
+                  "salestype": "SB",
+                  "posid": null,
+                  "pono": "",
+                  "sono": "",
+                  "grouprv": "",
+                  "usE_ONTOP": null,
+                  "ontoP_ID": null,
+                  "requetE_INVOICE": false,
+                  "isreturn": false,
+                  "totalqty": -1,
+                  "totallist": -895,
+                  "totaldiscount": null,
+                  "nettotal": -300,
+                  "possalesdt": null
+              }
+          ]

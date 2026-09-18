@@ -1,0 +1,200 @@
+info:
+  name: GetDiscount
+  type: http
+  seq: 11
+
+http:
+  method: POST
+  url: http://appportal.sabina.co.th:8071/api/Promotion/getDiscount
+  body:
+    type: json
+    data: |-
+      {
+        "customerid": "0050",
+        "date": "2026-06-05"
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTc2MzUzNDcyNiwiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.kiZFMuZ4zkp5n-YvHfewIr5QddArR8lR7jOC4Mh1ycY
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetDiscount
+    request:
+      url: https://192.168.5.30:8072/api/Promotion/getDiscount
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"customerid\": \"A005\",\r
+
+          \  \"date\": \"2025-02-09\" /*where sale date and status = A */\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Encoding
+          value: gzip
+        - name: Vary
+          value: Accept-Encoding
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 11 Feb 2025 06:36:09 GMT
+      body:
+        type: json
+        data: |-
+          [
+              {
+                  "id": "DIS11030001",
+                  "description": ".NORMAL",
+                  "discountType": "N",
+                  "discountAmount": 0,
+                  "commissionType": "F",
+                  "pospromotion": "",
+                  "roundprice": "N",
+                  "discountgroup": "S",
+                  "descriptionen": null,
+                  "status": "A",
+                  "createby": null,
+                  "createdate": null,
+                  "updateby": null,
+                  "updatedate": null,
+                  "registerword": null,
+                  "signageword": null,
+                  "commercialword": null,
+                  "pricelist": "",
+                  "defaulT_PROMOTION": true,
+                  "oN_TOP_TYPE": null,
+                  "minimuM_QTY": null
+              },
+              {
+                  "id": "DISALL15030004",
+                  "description": "Buy1Take1",
+                  "discountType": "F",
+                  "discountAmount": 0,
+                  "commissionType": "D",
+                  "pospromotion": "",
+                  "roundprice": "N",
+                  "discountgroup": "S",
+                  "descriptionen": null,
+                  "status": "A",
+                  "createby": null,
+                  "createdate": null,
+                  "updateby": null,
+                  "updatedate": null,
+                  "registerword": null,
+                  "signageword": null,
+                  "commercialword": null,
+                  "pricelist": "",
+                  "defaulT_PROMOTION": false,
+                  "oN_TOP_TYPE": null,
+                  "minimuM_QTY": null
+              },
+              {
+                  "id": "DISALL19050002",
+                  "description": "3 for 999",
+                  "discountType": "O",
+                  "discountAmount": 333,
+                  "commissionType": "D",
+                  "pospromotion": "",
+                  "roundprice": "N",
+                  "discountgroup": "S",
+                  "descriptionen": null,
+                  "status": "A",
+                  "createby": null,
+                  "createdate": null,
+                  "updateby": null,
+                  "updatedate": null,
+                  "registerword": "",
+                  "signageword": "",
+                  "commercialword": "",
+                  "pricelist": "",
+                  "defaulT_PROMOTION": false,
+                  "oN_TOP_TYPE": null,
+                  "minimuM_QTY": null
+              },
+              {
+                  "id": "DISALL17030001",
+                  "description": "Discount 55%",
+                  "discountType": "P",
+                  "discountAmount": 55,
+                  "commissionType": "D",
+                  "pospromotion": "",
+                  "roundprice": "N",
+                  "discountgroup": "S",
+                  "descriptionen": null,
+                  "status": "A",
+                  "createby": null,
+                  "createdate": null,
+                  "updateby": null,
+                  "updatedate": null,
+                  "registerword": null,
+                  "signageword": null,
+                  "commercialword": null,
+                  "pricelist": "",
+                  "defaulT_PROMOTION": false,
+                  "oN_TOP_TYPE": null,
+                  "minimuM_QTY": null
+              },
+              {
+                  "id": "DISALL14030001",
+                  "description": "Discount 10%",
+                  "discountType": "P",
+                  "discountAmount": 10,
+                  "commissionType": "D",
+                  "pospromotion": "",
+                  "roundprice": "N",
+                  "discountgroup": "S",
+                  "descriptionen": null,
+                  "status": "A",
+                  "createby": null,
+                  "createdate": null,
+                  "updateby": null,
+                  "updatedate": null,
+                  "registerword": null,
+                  "signageword": null,
+                  "commercialword": null,
+                  "pricelist": "",
+                  "defaulT_PROMOTION": false,
+                  "oN_TOP_TYPE": null,
+                  "minimuM_QTY": null
+              },
+              {
+                  "id": "DISALL15030001",
+                  "description": "Discount 50%",
+                  "discountType": "P",
+                  "discountAmount": 50,
+                  "commissionType": "D",
+                  "pospromotion": "",
+                  "roundprice": "N",
+                  "discountgroup": "S",
+                  "descriptionen": null,
+                  "status": "A",
+                  "createby": null,
+                  "createdate": null,
+                  "updateby": null,
+                  "updatedate": null,
+                  "registerword": null,
+                  "signageword": null,
+                  "commercialword": null,
+                  "pricelist": "",
+                  "defaulT_PROMOTION": false,
+                  "oN_TOP_TYPE": null,
+                  "minimuM_QTY": null
+              }
+          ]

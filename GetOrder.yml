@@ -1,0 +1,144 @@
+info:
+  name: GetOrder
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: http://appportal.sabina.co.th:8071/api/PosSales/getOrder
+  body:
+    type: json
+    data: "{\r
+
+      \  \"docno\": \"PSA00425110001\",\r
+
+      \  \"customerId\": \"\",\r
+
+      \  \"isDateSearch\": \"N\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTc2MzgwNTU4NiwiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.q8PoNp6WQHW2G6HW8h6yV_h-gMC5RjHZLuMLpuNZ-B8
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetOrder
+    request:
+      url: https://192.168.5.30:8072/api/PosSales/getOrder
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"docno\": \"PSA00525020003\",\r
+
+          \  \"customerId\": \"\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Encoding
+          value: gzip
+        - name: Vary
+          value: Accept-Encoding
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 11 Feb 2025 05:35:59 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "docno": "PSA00525020003",
+              "customerid": "A005",
+              "salesdate": "2025-02-09T00:00:00",
+              "docdate": "2025-02-09T00:00:00",
+              "createdate": "2025-02-09T11:54:21.667",
+              "createuser": "PC001",
+              "updatedate": "2025-02-09T11:54:21.67",
+              "updateuser": "PC001",
+              "remark": "",
+              "status": "A",
+              "mB_ID": "",
+              "salestype": "",
+              "posid": null,
+              "pono": "",
+              "sono": "",
+              "grouprv": "",
+              "usE_ONTOP": true,
+              "ontoP_ID": "",
+              "requetE_INVOICE": true,
+              "isreturn": false,
+              "possalesdt": [
+                  {
+                      "docno": "PSA00525020003",
+                      "linenum": 1,
+                      "productid": "SBO246BKC40",
+                      "style": "SBO246",
+                      "qty": 1,
+                      "fullprice": 895,
+                      "discounttype": "N",
+                      "discountp": 0,
+                      "discounttotal": 0,
+                      "saleprice": 0,
+                      "comprice": 0,
+                      "promotionid": "",
+                      "pcup": "C",
+                      "psize": "40",
+                      "pcolor": "BK",
+                      "totalfullprice": 895,
+                      "totalsaleprice": 895,
+                      "totalcomprice": 895,
+                      "totaldiscount": 0,
+                      "discountid": "DIS11030001",
+                      "shopKey": "",
+                      "realprice": 0,
+                      "billcode": "",
+                      "checkFree": "N",
+                      "ontoP_PRICE": 0,
+                      "possales": null
+                  },
+                  {
+                      "docno": "PSA00525020003",
+                      "linenum": 2,
+                      "productid": "SBO246BKC38",
+                      "style": "SBO246",
+                      "qty": 1,
+                      "fullprice": 895,
+                      "discounttype": "N",
+                      "discountp": 0,
+                      "discounttotal": 0,
+                      "saleprice": 0,
+                      "comprice": 0,
+                      "promotionid": "",
+                      "pcup": "C",
+                      "psize": "38",
+                      "pcolor": "BK",
+                      "totalfullprice": 895,
+                      "totalsaleprice": 895,
+                      "totalcomprice": 895,
+                      "totaldiscount": 0,
+                      "discountid": "DIS11030001",
+                      "shopKey": "",
+                      "realprice": 0,
+                      "billcode": "",
+                      "checkFree": "N",
+                      "ontoP_PRICE": 0,
+                      "possales": null
+                  }
+              ]
+          }

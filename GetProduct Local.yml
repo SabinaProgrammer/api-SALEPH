@@ -1,0 +1,28 @@
+info:
+  name: GetProduct Local
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: https://localhost:7219/api/Product/getProduct
+  body:
+    type: json
+    data: "{\r
+
+      \    \"productid\" : \"SBO364SDC42\",\r
+
+      \    \"DiscountId\" :\"DISALL18020001\"\r
+
+      \    \r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTc0MDI5Mzc4NywiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.8pw9EEaVhzB1fb3ulra1BBMVfys2tyfcL2LUTTWiYKQ
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

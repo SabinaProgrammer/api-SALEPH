@@ -1,0 +1,120 @@
+info:
+  name: SaveNewPossales-Return
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: http://apptest.sabina.co.th:8071/api/PosSales/saveNewPossale
+  body:
+    type: json
+    data: "\r
+
+      {\r
+
+      \  \"docno\": \"\",\r
+
+      \  \"customerid\": \"G010\",\r
+
+      \  \"salesdate\": \"2025-03-06\",\r
+
+      \  \"docdate\": \"2025-03-06\",\r
+
+      \  \"createuser\": \"000007\",\r
+
+      \  \"updateuser\": \"000007\",\r
+
+      \  \"remark\": \"null\",\r
+
+      \  \"status\": \"A\",\r
+
+      \  \"mB_ID\": \"\",\r
+
+      \  \"salestype\": \"\",\r
+
+      \  \"posid\": \"G010\",\r
+
+      \  \"pono\": \"\",\r
+
+      \  \"sono\": \"\",\r
+
+      \  \"grouprv\": \"\",\r
+
+      \  \"usE_ONTOP\": false,\r
+
+      \  \"ontoP_ID\": \"\",\r
+
+      \  \"requetE_INVOICE\": true,\r
+
+      \   \"ISRETURN\" : false,\r
+
+      \  \"possalesdt\": [        \r
+
+      {\r
+
+      \      \"linenum\": \"1\",\r
+
+      \      \"productid\": \"SBA1001ABKA30\",\r
+
+      \      \"style\": \"SBA1001A\",\r
+
+      \      \"qty\": \"1\",\r
+
+      \      \"fullprice\":\"1045\",\r
+
+      \      \"discounttype\": \"P\",\r
+
+      \      \"discountp\": \"0\",\r
+
+      \      \"discounttotal\": \"104.5\",\r
+
+      \      \"saleprice\": \"940.5\",\r
+
+      \      \"comprice\": \"940.5\",\r
+
+      \      \"promotionid\": \"\",\r
+
+      \      \"pcup\": \"A\",\r
+
+      \      \"psize\": \"30\",\r
+
+      \      \"pcolor\":  \"BK\",\r
+
+      \      \"totalfullprice\": \"1045\",\r
+
+      \      \"totalsaleprice\": \"940.5\",\r
+
+      \      \"totalcomprice\": \"0\",\r
+
+      \      \"totaldiscount\": \"104.5\",\r
+
+      \      \"discountid\": \"DISALL14030001\",\r
+
+      \      \"shopKey\": \"\",\r
+
+      \      \"realprice\":\"940.5\",\r
+
+      \      \"billcode\": \"\",\r
+
+      \      \"checkFree\": \"N\",\r
+
+      \      \"ontoP_PRICE\": \"0\"\r
+
+      \r
+
+      \        \r
+
+      }\r
+
+      \ ]\r
+
+      }\r\n"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTc0MTQxNjg5OSwiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.Ak3fiH6cn74KuaIO2b2IQikoXycgkenhJhL5P_wiqzs
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

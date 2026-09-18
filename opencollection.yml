@@ -1,0 +1,51 @@
+opencollection: 1.0.0
+
+info:
+  name: POSPH
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  auth:
+    type: bearer
+    token: '"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTc4NDc5NDM1MywiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.rWi1evdC5ws86AJyX_rdfJXUlXgtFoJcnlh40ymLPNE'
+  variables:
+    - name: baseUrl
+      value: https://farming-simulator.pstmn.io
+
+docs:
+  content: |-
+    # ✅ Add your collections and share with partners
+
+    Postman recommends forking your collections from internal team workspaces to this workspace.
+
+    Here are some useful tips when sharing collections with partners:
+
+    - Add details about the **API keys/tokens** required and steps that cover how to get them
+        
+    - Make sure any sensitive and repeated data are stored in **environment variables**
+        
+    - Ensure your collection contains relevant **API documentation** for partners
+        
+    - Add **example responses** to each request in the collection. For example, this collection has a `GET authenticated user` request with two example responses
+        
+
+    ## Resolving Partners' questions and issues
+
+    Partners can ask add use **Postman comments** to ask contextual questions and get help. You can also add links to your support pages or developer forums.
+  type: text/markdown
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

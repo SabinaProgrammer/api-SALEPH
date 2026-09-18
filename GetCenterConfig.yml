@@ -1,0 +1,69 @@
+info:
+  name: GetCenterConfig
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: http://apptest.sabina.co.th:8071/api/Config/getCenterConfig
+  body:
+    type: json
+    data: "{\r\n  \"id\": 1\r\n}"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTc0MTM1NDM2NiwiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.AThattp1lD-CqKqqZRj9YewWXPPG7vPhPcHooEYQ1yI
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetCenterConfig
+    request:
+      url: http://192.168.5.30:8071/api/Config/getCenterConfig
+      method: POST
+      body:
+        type: json
+        data: "{\r\n  \"id\": 1\r\n}"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Encoding
+          value: gzip
+        - name: Vary
+          value: Accept-Encoding
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 11 Feb 2025 06:50:24 GMT
+      body:
+        type: json
+        data: |-
+          {
+              "id": 1,
+              "companyName": "บริษัท ซาบีน่า ฟาร์อีสท์ จำกัด",
+              "vat": 12,
+              "youTube": "<iframe width=\"250\" height=\"199\" src=\"http://www.youtube.com/embed/3i0XvPPhrdI?rel=0&amp;autoplay=1&loop=1&playlist=3i0XvPPhrdI\" frameborder=\"0\" allowfullscreen></iframe> ",
+              "discount": 40,
+              "localName": "MODA SBN INCORPORATED",
+              "address1": "154  M.A.Roxas Street",
+              "address2": "Calumpang   Marikina  Manila",
+              "engLocalName": "MODA SBN INCORPORATED",
+              "engAddress1": "154  M.A.Roxas Street",
+              "engAddress2": "Calumpang   Marikina  Manila",
+              "contry": "PH",
+              "minSalesDate": null,
+              "countryName": "Phillipins",
+              "exchangerate": 0.6,
+              "day_For_Return": null,
+              "managername": null
+          }

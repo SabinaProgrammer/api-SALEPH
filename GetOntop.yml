@@ -1,0 +1,62 @@
+info:
+  name: GetOntop
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: https://192.168.5.30:8072/api/Promotion/getOntop
+  body:
+    type: json
+    data: "{\r
+
+      \  \"customerid\": \"A005\",\r
+
+      \  \"date\": \"2025-02-09\"\r
+
+      }"
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTczOTMzODU0OSwiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.mB8A40TsH71jSEoaHOCstOwFDzx0Kl_wtTb9Qkb_BCc
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: GetOntop
+    request:
+      url: https://192.168.5.30:8072/api/Promotion/getOntop
+      method: POST
+      body:
+        type: json
+        data: "{\r
+
+          \  \"customerid\": \"A005\",\r
+
+          \  \"date\": \"2025-02-09\"\r
+
+          }"
+    response:
+      status: 200
+      statusText: OK
+      headers:
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Content-Encoding
+          value: gzip
+        - name: Vary
+          value: Accept-Encoding
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: X-Powered-By
+          value: ASP.NET
+        - name: Date
+          value: Tue, 11 Feb 2025 06:50:44 GMT
+      body:
+        type: json
+        data: "[]"
