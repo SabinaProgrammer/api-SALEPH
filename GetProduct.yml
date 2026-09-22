@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://192.168.5.30:8071:8071/api/Product/getProduct
+  url: http://192.168.5.30:8071/api/Product/getProduct
   body:
     type: json
     data: "{\r
@@ -30,3 +30,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://appportal.sabina.co.th:8071/api/Authen/GetToken
+  url: http://192.168.5.30:8071/api/Authen/GetToken
   body:
     type: json
     data: ""
@@ -18,3 +18,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true

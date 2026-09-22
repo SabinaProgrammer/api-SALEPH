@@ -1,0 +1,22 @@
+info:
+  name: GetCustomerById
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: http://appportal.sabina.co.th:8072/api/Customer/GetCustomerById
+  body:
+    type: json
+    data: |-
+      {
+        "customerid": "0028"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

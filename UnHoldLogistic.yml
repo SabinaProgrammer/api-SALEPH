@@ -1,0 +1,23 @@
+info:
+  name: UnHoldLogistic
+  type: http
+  seq: 23
+
+http:
+  method: POST
+  url: http://192.168.5.30:8071/api/Customer/UnHoldLogistic
+  body:
+    type: json
+    data: |-
+      {
+        "customerid": "0001",
+        "username": "CHAT"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

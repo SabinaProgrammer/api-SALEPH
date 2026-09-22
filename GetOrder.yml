@@ -8,24 +8,22 @@ http:
   url: http://appportal.sabina.co.th:8071/api/PosSales/getOrder
   body:
     type: json
-    data: "{\r
-
-      \  \"docno\": \"PSA00425110001\",\r
-
-      \  \"customerId\": \"\",\r
-
-      \  \"isDateSearch\": \"N\"\r
-
-      }"
+    data: |-
+      {
+        "docno": "PSA00425110001",
+        "customerId": "A004",
+        "isDateSearch": "N"
+      }
   auth:
     type: bearer
-    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTc2MzgwNTU4NiwiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.q8PoNp6WQHW2G6HW8h6yV_h-gMC5RjHZLuMLpuNZ-B8
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6Im1rZHdsYTg5MDM0MS0wOSIsImV4cCI6MTc4OTgwNjM5NSwiaXNzIjoiYXBwcG9ydGFsLnNhYmluYS5jby50aCIsImF1ZCI6ImFwcHBvcnRhbC5zYWJpbmEuY28udGgifQ.n5HWcQeR-IJRO4NzdLkV2zIX6zGWreWfHcjF2IFEOyo
 
 settings:
   encodeUrl: true
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
 
 examples:
   - name: GetOrder

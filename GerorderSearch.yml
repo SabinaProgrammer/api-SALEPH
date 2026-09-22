@@ -5,7 +5,7 @@ info:
 
 http:
   method: POST
-  url: http://appportal.sabina.co.th:8071/api/PosSales/getOrder_Search
+  url: http://192.168.5.30:8071/api/PosSales/getOrder_Search
   body:
     type: json
     data: "{\r
@@ -28,3 +28,4 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
+  forwardAuthorizationHeader: true
